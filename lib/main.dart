@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:monasba_app/features/on_boarding/presentation/splach_screen.dart';
+import 'package:monasba_app/features/auth/presentation/reassign_password_screen.dart';
+import 'package:monasba_app/features/auth/presentation/reassign_success_screen.dart';
+import 'package:monasba_app/features/auth/presentation/sign_up_screen.dart';
+import 'package:monasba_app/features/auth/presentation/update_password_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +14,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: SplachScreen());
+    return MaterialApp(home: SignUpScreen());
   }
 }

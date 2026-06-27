@@ -17,6 +17,13 @@ class AppTextStyles {
     color: Colors.white,
   );
 
+  static TextStyle font20Blackbold = TextStyle(
+    fontSize: 20,
+    fontFamily: 'Almarai',
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.black,
+  );
+
   static TextStyle font15WhiteBold = TextStyle(
     fontSize: 15,
     fontFamily: 'Almarai',
@@ -36,6 +43,41 @@ class AppTextStyles {
     fontFamily: 'Almarai',
     fontWeight: FontWeightHelper.bold,
     color: Colors.white,
+  );
+
+  static TextStyle font32BlackRegular = TextStyle(
+    fontSize: 32,
+    fontFamily: 'Almarai',
+    fontWeight: FontWeightHelper.regular,
+    color: Colors.black,
+  );
+
+  static TextStyle font20BlackRegular = TextStyle(
+    fontSize: 20,
+    fontFamily: 'Almarai',
+    fontWeight: FontWeightHelper.regular,
+    color: Colors.black,
+  );
+
+  static TextStyle font20BlackBold = TextStyle(
+    fontSize: 20,
+    fontFamily: 'Almarai',
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.black,
+  );
+
+  static TextStyle font12BlackRegular = TextStyle(
+    fontSize: 12,
+    fontFamily: 'Almarai',
+    fontWeight: FontWeightHelper.regular,
+    color: Colors.black,
+  );
+
+  static TextStyle font12BlackSecondary = TextStyle(
+    fontSize: 12,
+    fontFamily: 'Almarai',
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.secondary,
   );
 
   static TextStyle font15GreyRegular = TextStyle(
@@ -94,6 +136,13 @@ class AppTextStyles {
     fontFamily: 'Almarai',
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
+  );
+
+  static TextStyle font14GreyRegular = TextStyle(
+    fontSize: 14,
+    fontFamily: 'Almarai',
+    fontWeight: FontWeightHelper.regular,
+    color: Colors.grey,
   );
 
   static TextStyle font14Bold = TextStyle(
@@ -276,10 +325,25 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
   );
+  static TextStyle font12GreyRegularUnderline = TextStyle(
+    fontSize: 12,
+    fontFamily: 'Almarai',
+    fontWeight: FontWeightHelper.regular,
+    color: Colors.grey,
+    decoration: TextDecoration.underline,
+  );
+
   static TextStyle font12GreyRegular = TextStyle(
     fontSize: 12,
     fontFamily: 'Almarai',
     fontWeight: FontWeightHelper.regular,
     color: Colors.grey,
+  );
+
+  static TextStyle font12SecondaryRegular = TextStyle(
+    fontSize: 12,
+    fontFamily: 'Almarai',
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.secondary,
   );
 }
