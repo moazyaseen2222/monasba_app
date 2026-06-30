@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:monasba_app/core/utils/app_colors.dart';
-import 'package:monasba_app/core/utils/app_text_styles.dart';
+import 'package:monasba_app/core/helpers/extensions.dart';
+import 'package:monasba_app/core/resources/images_maneger.dart';
+import 'package:monasba_app/core/resources/strings_maneger.dart';
+import 'package:monasba_app/core/resources/colors_maneger.dart';
+import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
+import 'package:monasba_app/core/routing/routes.dart';
 import 'package:monasba_app/features/home/presentation/home_screen.dart';
 import 'package:monasba_app/features/on_boarding/models/on_boarding_model.dart';
 import 'package:monasba_app/features/on_boarding/widgets/onboarding_item_widget.dart';
@@ -15,22 +19,19 @@ class OnBoardingScreen extends StatefulWidget {
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   final List<OnBoardingModel> onboardingItems = [
     OnBoardingModel(
-      imagePath: 'assets/images/onboarding1.svg',
-      title: 'نظّم مناسبتك بسهولة وذكاء',
-      description:
-          'ارفع صورة دعوتك الجاهزة، أضف تفاصيل المناسبة مثل الاسم والمكان والموعد، ودع التطبيق يتولى إرسالها لجميع المدعوين بطريقة أنيقة ومنظمة.',
+      imagePath: ImagesManeger.onboarding1,
+      title: StringsManeger.onBoading1Title,
+      description: StringsManeger.onBoading1Description,
     ),
     OnBoardingModel(
-      imagePath: 'assets/images/onboarding2.svg',
-      title: 'تابع المدعوين وتفاعلهم بكل سهولة',
-      description:
-          'اعرف من أكّد الحضور أو اعتذر فوراً، وراقب الإحصائيات لحظة بلحظة لتكون على اطلاع دائم بعدد الحاضرين.',
+      imagePath: ImagesManeger.onboarding2,
+      title: StringsManeger.onBoading2Title,
+      description: StringsManeger.onBoading2Description,
     ),
     OnBoardingModel(
-      imagePath: 'assets/images/onboarding3.svg',
-      title: 'استقبل الإهداءات الرقمية بكل راحة وأمان',
-      description:
-          'ادع ضيوفك يشاركون فرحتك بإرسال الهدايا المالية مباشرة عبر التطبيق، وكل المبالغ تُجمع في محفظة آمنة.',
+      imagePath: ImagesManeger.onboarding3,
+      title: StringsManeger.onBoading3Title,
+      description: StringsManeger.onBoading3Description,
     ),
   ];
 
@@ -61,6 +62,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     }
   }
 
+  void toSignUpScreen() {
+    context.pushReplacementNamed(Routes.loginScreen);
+  }
+
+  void toLoginScreen() {
+    context.pushReplacementNamed(Routes.loginScreen);
+  }
+
   Widget _buildBottomButtons() {
     // First page
     if (_currentIndex == 0) {
@@ -73,7 +82,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             height: 48,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(18),
-              color: AppColors.primary,
+              color: ColorsManeger.primary,
             ),
 
             child: Icon(Icons.arrow_forward, color: Colors.white),
@@ -85,7 +94,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     // Last page
     if (_currentIndex == onboardingItems.length - 1) {
       return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          /// Need Refactoring...
           SizedBox(
             width: double.infinity,
             height: 50,
@@ -96,20 +107,21 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 height: 48,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
-                  color: AppColors.primary,
+                  color: ColorsManeger.primary,
                 ),
 
                 child: Center(
                   child: Text(
                     'تسجيل الآن',
-                    style: AppTextStyles.font15WhiteBold,
+                    style: AppTextStylesManeger.font15WhiteBold,
                   ),
                 ),
               ),
             ),
           ),
           SizedBox(height: 10),
-          Text('!تسجيل الدخول', style: AppTextStyles.font12GreyRegular),
+
+          Text('!تسجيل الدخول', style: AppTextStylesManeger.font12GreyRegular),
         ],
       );
     }
@@ -125,7 +137,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             height: 48,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(18),
-              color: AppColors.primary,
+              color: ColorsManeger.primary,
             ),
 
             child: Icon(Icons.arrow_back, color: Colors.white),
@@ -138,7 +150,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             height: 48,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(18),
-              color: AppColors.primary,
+              color: ColorsManeger.primary,
             ),
 
             child: Icon(Icons.arrow_forward, color: Colors.white),
@@ -167,7 +179,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       ),
                     );
                   },
-                  child: Text('تخطي', style: AppTextStyles.font15GreyRegular),
+                  child: Text(
+                    'تخطي',
+                    style: AppTextStylesManeger.font15GreyRegular,
+                  ),
                 ),
               ),
 
@@ -200,7 +215,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       borderRadius: BorderRadius.circular(20),
                       color:
                           _currentIndex == index
-                              ? AppColors.primary
+                              ? ColorsManeger.primary
                               : Colors.grey.shade300,
                     ),
                   ),

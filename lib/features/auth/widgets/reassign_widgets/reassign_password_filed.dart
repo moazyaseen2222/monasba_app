@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monasba_app/core/utils/app_text_styles.dart';
+import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 
 class ReassignPasswordFiled extends StatelessWidget {
   const ReassignPasswordFiled({super.key});
@@ -39,7 +39,7 @@ class ReassignPasswordFiled extends StatelessWidget {
                 "(972) 59-726-0592",
                 textAlign: TextAlign.right,
                 textDirection: TextDirection.ltr,
-                style: AppTextStyles.font14BlackBold,
+                style: AppTextStylesManeger.font14BlackBold,
               ),
             ),
           ),

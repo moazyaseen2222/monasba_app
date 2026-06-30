@@ -1,19 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:monasba_app/features/auth/presentation/reassign_password_screen.dart';
-import 'package:monasba_app/features/auth/presentation/reassign_success_screen.dart';
-import 'package:monasba_app/features/auth/presentation/sign_up_screen.dart';
-import 'package:monasba_app/features/auth/presentation/update_password_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:monasba_app/core/resources/colors_maneger.dart';
+import 'package:monasba_app/core/routing/app_router.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'package:monasba_app/features/on_boarding/presentation/pages/splach_screen.dart';
+
+void main() async {
+  await ScreenUtil.ensureScreenSize();
+  runApp(MyApp(appRouter: AppRouter()));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final AppRouter appRouter;
+  const MyApp({super.key, required this.appRouter});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: SignUpScreen());
+    return ScreenUtilInit(
+      designSize: Size(375, 812),
+      minTextAdapt: true,
+      child: MaterialApp(
+        theme: ThemeData(
+          scaffoldBackgroundColor: ColorsManeger.white,
+          appBarTheme: AppBarTheme(backgroundColor: ColorsManeger.white),
+        ),
+        home: SplachScreen(),
+        onGenerateRoute: appRouter.generateRoute,
+      ),
+    );
   }
 }

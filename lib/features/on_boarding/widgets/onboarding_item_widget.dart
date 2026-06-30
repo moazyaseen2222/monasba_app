@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:monasba_app/core/utils/app_text_styles.dart';
+import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 import 'package:monasba_app/features/on_boarding/models/on_boarding_model.dart';
 
 class OnboardingItemWidget extends StatelessWidget {
@@ -26,7 +26,7 @@ class OnboardingItemWidget extends StatelessWidget {
         Text(
           item.description,
           textAlign: TextAlign.center,
-          style: AppTextStyles.font12GreyRegular,
+          style: AppTextStylesManeger.font12GreyRegular,
         ),
       ],
     );

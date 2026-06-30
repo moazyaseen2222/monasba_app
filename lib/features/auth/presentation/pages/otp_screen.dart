@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:monasba_app/core/utils/app_colors.dart';
-import 'package:monasba_app/core/utils/app_main_button.dart';
-import 'package:monasba_app/core/utils/app_text_styles.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:monasba_app/core/helpers/app_spacer.dart';
+import 'package:monasba_app/core/helpers/extensions.dart';
+import 'package:monasba_app/core/resources/strings_maneger.dart';
+import 'package:monasba_app/core/routing/routes.dart';
+import 'package:monasba_app/core/widgets/app_main_button.dart';
+import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 import 'package:monasba_app/features/auth/widgets/background_pattern.dart';
 import 'package:pinput/pinput.dart';
 
@@ -11,12 +15,12 @@ class OtpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final defaultPinTheme = PinTheme(
-      width: 49,
-      height: 56,
-      textStyle: AppTextStyles.font18BlackBold,
+      width: 49.w,
+      height: 56.h,
+      textStyle: AppTextStylesManeger.font18BlackBold,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey),
-        borderRadius: BorderRadius.circular(6),
+        borderRadius: BorderRadius.circular(6.r),
       ),
     );
 
@@ -30,9 +34,9 @@ class OtpScreen extends StatelessWidget {
             SingleChildScrollView(
               child: Center(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0,
-                    vertical: 150,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 20.0.w,
+                    vertical: 150.h,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,32 +44,31 @@ class OtpScreen extends StatelessWidget {
                     children: [
                       Text(
                         textAlign: TextAlign.right,
-                        "أدخل رمز التحقق",
-                        style: AppTextStyles.font20BlackBold,
+                        StringsManeger.enterOtp,
+                        style: AppTextStylesManeger.font20BlackBold,
                       ),
-                      SizedBox(height: 20),
+                      verticalSpace(20),
                       Text(
-                        "لقد أرسلنا رمز التحقق إلى +628*******716 هل تريد تغييره؟",
-                        style: AppTextStyles.font14GreyRegular,
+                        StringsManeger.otpDescription,
+                        style: AppTextStylesManeger.font14GreyRegular,
                       ),
-                      SizedBox(height: 130),
+                      verticalSpace(130),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "رمز التحقق",
-                            style: AppTextStyles.font14BlackBold,
+                            StringsManeger.otp,
+                            style: AppTextStylesManeger.font14BlackBold,
                           ),
-                          SizedBox(width: 50),
+                          verticalSpace(30),
                           Text(
-                            "إعادة إرسال الرمز",
-                            style: AppTextStyles.font14GreyRegular,
+                            StringsManeger.resendOtp,
+                            style: AppTextStylesManeger.font14GreyRegular,
                           ),
                         ],
                       ),
 
-                      const SizedBox(height: 30),
-
+                      verticalSpace(30),
                       Center(
                         child: Pinput(
                           length: 6,
@@ -73,7 +76,7 @@ class OtpScreen extends StatelessWidget {
                           focusedPinTheme: defaultPinTheme.copyWith(
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.blue),
-                              borderRadius: BorderRadius.circular(6),
+                              borderRadius: BorderRadius.circular(6..r),
                             ),
                           ),
                           onCompleted: (code) {
@@ -81,22 +84,29 @@ class OtpScreen extends StatelessWidget {
                           },
                         ),
                       ),
-                      SizedBox(height: 30),
-
+                      verticalSpace(30),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "إرسال رمز إعادة الضبط في",
-                            style: AppTextStyles.font12GreyRegular,
+                            StringsManeger.resendOtpIn,
+                            style: AppTextStylesManeger.font12GreyRegular,
                           ),
                           SizedBox(width: 50),
-                          Text("03:05", style: AppTextStyles.font12GreyRegular),
+                          Text(
+                            "03:05",
+                            style: AppTextStylesManeger.font12GreyRegular,
+                          ),
                         ],
                       ),
 
-                      SizedBox(height: 100),
-                      AppMainButton(title: ('التالي'), onPressed: () {}),
+                      verticalSpace(100),
+                      AppMainButton(
+                        title: StringsManeger.next,
+                        onPressed: () {
+                          context.pushNamed(Routes.updatePasswordScreen);
+                        },
+                      ),
                     ],
                   ),
                 ),

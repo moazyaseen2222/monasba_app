@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:monasba_app/core/utils/app_main_button.dart';
-import 'package:monasba_app/core/utils/app_text_styles.dart';
+import 'package:monasba_app/core/resources/images_maneger.dart';
+import 'package:monasba_app/core/resources/strings_maneger.dart';
+import 'package:monasba_app/core/widgets/app_main_button.dart';
+import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 import 'package:monasba_app/features/auth/widgets/background_pattern.dart';
 import 'package:monasba_app/features/auth/widgets/reassign_widgets/description_rich_text.dart';
+import 'package:monasba_app/features/auth/widgets/reassign_widgets/success_signup_rich_text.dart';
 
-class ReassignSuccessScreen extends StatelessWidget {
-  const ReassignSuccessScreen({super.key});
+class SignUpSuccessScreen extends StatelessWidget {
+  const SignUpSuccessScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,22 +24,22 @@ class ReassignSuccessScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
 
                 children: [
-                  SvgPicture.asset('assets/images/lock_success.svg'),
+                  SvgPicture.asset(ImagesManeger.success),
                   SizedBox(height: 20),
                   Text(
-                    '!تم تغيير كلمة المرور بنجاح',
-                    style: AppTextStyles.font16BlackRegular,
+                    StringsManeger.accountCreatedSuccessfully,
+                    style: AppTextStylesManeger.font16BlackRegular,
                   ),
                   SizedBox(height: 20),
 
-                  DescriptionRichText(),
+                  SuccessSignupRichText(),
 
                   SizedBox(height: 70),
-                  AppMainButton(title: 'تسجيل الدخول', onPressed: () {}),
+                  AppMainButton(title: StringsManeger.login, onPressed: () {}),
                   SizedBox(height: 10),
                   Text(
-                    'تصفح سياسات الاستخدام والخصوصية',
-                    style: AppTextStyles.font10GreyRegular.copyWith(
+                    StringsManeger.seeTrems,
+                    style: AppTextStylesManeger.font10GreyRegular.copyWith(
                       decoration: TextDecoration.underline,
                     ),
                   ),

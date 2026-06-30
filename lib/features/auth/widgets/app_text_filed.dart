@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monasba_app/core/utils/app_text_styles.dart';
+import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 
 class AppTextFiled extends StatelessWidget {
   const AppTextFiled({super.key, required this.hintText});
@@ -17,7 +17,7 @@ class AppTextFiled extends StatelessWidget {
       child: TextField(
         decoration: InputDecoration(
           hintText: hintText,
-          hintStyle: AppTextStyles.font14BlackBold,
+          hintStyle: AppTextStylesManeger.font14BlackBold,
           border: InputBorder.none,
         ),
       ),

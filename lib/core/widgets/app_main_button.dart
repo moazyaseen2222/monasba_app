@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:monasba_app/core/utils/app_colors.dart';
-import 'package:monasba_app/core/utils/app_text_styles.dart';
+import 'package:monasba_app/core/resources/colors_maneger.dart';
+import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 
 class AppMainButton extends StatelessWidget {
   const AppMainButton({
@@ -26,11 +26,11 @@ class AppMainButton extends StatelessWidget {
           onPressed();
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: backgroundColor ?? AppColors.primary,
+          backgroundColor: backgroundColor ?? ColorsManeger.primary,
 
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
         ),
-        child: Text(title, style: AppTextStyles.font14WhiteBold),
+        child: Text(title, style: AppTextStylesManeger.font14WhiteBold),
       ),
     );
   }

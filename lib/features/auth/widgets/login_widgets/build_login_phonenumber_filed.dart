@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monasba_app/core/utils/app_text_styles.dart';
+import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 
 // ignore: camel_case_types
 class AppPhoneNumberFiled extends StatelessWidget {
@@ -40,7 +40,7 @@ class AppPhoneNumberFiled extends StatelessWidget {
                 "(972) 59-726-0592",
                 textAlign: TextAlign.right,
                 textDirection: TextDirection.ltr,
-                style: AppTextStyles.font14BlackBold,
+                style: AppTextStylesManeger.font14BlackBold,
               ),
             ),
           ),

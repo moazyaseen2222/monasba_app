@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:monasba_app/features/on_boarding/presentation/on_boarding_screen.dart';
+import 'package:monasba_app/core/helpers/extensions.dart';
+import 'package:monasba_app/core/resources/images_maneger.dart';
+import 'package:monasba_app/core/routing/routes.dart';
 
 class SplachScreen extends StatefulWidget {
   const SplachScreen({super.key});
@@ -17,10 +20,7 @@ class _SplachScreenState extends State<SplachScreen> {
     Future.delayed(const Duration(seconds: 3), () {
       if (!mounted) return;
 
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => const OnBoardingScreen()),
-      );
+      context.pushReplacementNamed(Routes.loginScreen);
     });
   }
 
@@ -29,9 +29,9 @@ class _SplachScreenState extends State<SplachScreen> {
     return Scaffold(
       body: Center(
         child: SvgPicture.asset(
-          'assets/images/logo_light.svg',
-          width: 120,
-          height: 120,
+          ImagesManeger.logoLight,
+          width: 120.w,
+          height: 120.h,
         ),
       ),
     );
