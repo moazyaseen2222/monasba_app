@@ -123,6 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           }
                           return null;
                         },
+                        onChanged: (value) {},
                       ),
                       verticalSpace(5),
                       Align(

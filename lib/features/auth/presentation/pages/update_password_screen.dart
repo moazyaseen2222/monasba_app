@@ -59,6 +59,7 @@ class UpdatePasswordScreen extends StatelessWidget {
                         return null;
                       },
                       obscureText: obscureText,
+                      onChanged: (value) {},
                     ),
                     verticalSpace(20),
                     Row(
@@ -88,6 +89,7 @@ class UpdatePasswordScreen extends StatelessWidget {
                         return null;
                       },
                       obscureText: obscureText,
+                      onChanged: (value) {},
                     ),
 
                     Spacer(),

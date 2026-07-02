@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:monasba_app/core/routing/routes.dart';
+import 'package:monasba_app/features/addBankAccount/presentation/pages/add_bank_aacount_screen.dart';
+import 'package:monasba_app/features/addBankAccount/presentation/pages/ask_add_bank_account_screen.dart';
 import 'package:monasba_app/features/auth/presentation/pages/login_screen.dart';
 import 'package:monasba_app/features/auth/presentation/pages/otp_screen.dart';
 import 'package:monasba_app/features/auth/presentation/pages/reassign_password_screen.dart';
@@ -40,6 +42,18 @@ class AppRouter {
 
       case Routes.signUpSuccessScreen:
         return MaterialPageRoute(builder: (_) => const SignUpSuccessScreen());
+
+      case Routes.askAddBankAccount:
+        return MaterialPageRoute(builder: (_) => const AskAddBankAccount());
+
+      case Routes.addBankAccountScreen:
+        return MaterialPageRoute(builder: (_) => AddBankAccountScreen());
+
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder:
+              (_) => const Scaffold(body: Center(child: Text('Home Screen'))),
+        );
 
       ///-----------------------------------------------------------------------------
       default:

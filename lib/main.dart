@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monasba_app/core/resources/colors_maneger.dart';
 import 'package:monasba_app/core/routing/app_router.dart';
+import 'package:monasba_app/features/addBankAccount/presentation/pages/ask_add_bank_account_screen.dart';
 
 import 'package:monasba_app/features/on_boarding/presentation/pages/splach_screen.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: ColorsManeger.white,
           appBarTheme: AppBarTheme(backgroundColor: ColorsManeger.white),
         ),
-        home: SplachScreen(),
+        home: const AskAddBankAccount(),
         onGenerateRoute: appRouter.generateRoute,
       ),
     );
