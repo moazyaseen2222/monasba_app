@@ -11,4 +11,5 @@ class ImagesManeger {
   static const String flag = "$baseUrl/flag.svg";
   static const String flag1 = "$baseUrl/flag1.jpg";
   static const String success = "$baseUrl/success.svg";
+  static const String askAddBankAccount = "$baseUrl/ask_add_bank_account.svg";
 }

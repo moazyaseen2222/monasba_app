@@ -16,6 +16,7 @@ class StringsManeger {
   static const String forgetPassword = "هل نسيت كلمة السر ؟";
   static const String enterPassword = 'أدخل كلمة مرور';
   static const String unValiedPassword = 'كلمة مرور غير صالحة';
+  static const String inValiedName = 'الإسم غير صالح';
   static const String password = 'كلمة المرور';
   static const String phoneNumber = 'رقم الهاتف';
   static const String enterPhoneNumber = 'أدخل رقم الهاتف';
@@ -65,4 +66,30 @@ class StringsManeger {
   static const String assignPassword = 'تعيين كلمة المرور';
   static const String confirmPassword = 'تأكيد كلمة المرور';
   static const String alreadyHaveAccount = 'لدي حساب بالفعل؟';
+  static const String addBankAccount = 'أضف حسابك البنكي الآن';
+  static const String addBankAccountDescription =
+      'لتتمكن من استلام إهدائاتك بسهولة لاحقًا، يُفضّل إضافة الحساب البنكي الآن. يمكنك أيضًا تخطي هذه الخطوة وإضافته لاحقًا عند طلب السحب';
+  static const String addBankAccountButton = 'إضافة حساب الأن';
+  static const String skipAddBankAccount = 'تخطي إضافة الحساب';
+  static const String addingBankAccount = ' إضافة الحساب البنكي';
+  static const String addingBankAccountAppBarDesc =
+      'قم بإضافة حسابك البنكي لتحويل الرصيد إليه.';
+  static const String addingBankAccountDescription =
+      'أدخل معلوماتك البنكية بدقة لتتمكن من استلام أرباحك عند السحب';
+
+  static const String bankName = 'إسم المصرف';
+  static const String accountOnwerName = 'إسم صاحب الحساب';
+  static const String accountfullNumber = 'رقم الحساب الكامل';
+  static const String accountIbanNumber = 'رقم الIBAN الخاص بالحساب';
+
+  static const String enterBankName = 'أدخل اسم المصرف';
+  static const String enterAccountOnwerName = 'أدخل اسم صاحب الحساب';
+  static const String enterAccountfullNumber = 'أدخل رقم الحساب الكامل';
+  static const String enterAccountIbanNumber = 'أدخل رقم الIBAN الخاص بالحساب';
+
+  static const String confirmAddingBankAccount = 'تأكيد إضافة الحساب البنكي';
+  static const String confirmAddingBankAccountDescription =
+      'هل أنت متأكد من إضافة هذا الحساب البنكي؟ برجى التأكد من صحة جميع البيانات قبل المتابعة';
+  static const String confirm = 'تأكيد';
+  static const String cancel = 'إلغاء';
 }

@@ -72,6 +72,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           return null;
                         },
                         obscureText: obscureText,
+                        onChanged: (value) {},
                       ),
 
                       verticalSpace(30),
@@ -132,6 +133,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           }
                           return null;
                         },
+                        onChanged: (value) {},
                       ),
                       verticalSpace(30),
 
@@ -167,6 +169,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           }
                           return null;
                         },
+                        onChanged: (value) {},
                       ),
                       SizedBox(height: 40),
                       AppMainButton(title: 'إنشاء حساب جديد', onPressed: () {}),

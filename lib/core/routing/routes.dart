@@ -9,4 +9,7 @@ class Routes {
 
   static const String reassignPasswordSuccessScreen = '/reassignSuccessScreen';
   static const String signUpSuccessScreen = '/signUpSuccessScreen';
+  static const String askAddBankAccount = '/askAddBankAccount';
+  static const String addBankAccountScreen = '/addBankAccountScreen';
+  static const String homeScreen = '/homeScreen';
 }

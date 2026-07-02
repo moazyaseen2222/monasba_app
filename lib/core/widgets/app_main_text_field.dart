@@ -19,6 +19,8 @@ class AppTextFormField extends StatelessWidget {
     this.suffixIcon,
     this.labelStyle,
     this.hintText,
+    required Null Function(dynamic value) onChanged,
+    this.hintStyle,
   });
 
   final String? title;
@@ -32,6 +34,7 @@ class AppTextFormField extends StatelessWidget {
   final Color? fillColor;
   final TextStyle? labelStyle;
   final String? hintText;
+  final TextStyle? hintStyle;
 
   final Function(String?) validator;
 
@@ -47,6 +50,7 @@ class AppTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         labelStyle: labelStyle ?? AppTextStylesManeger.font13GreyRegular,
         suffixIcon: suffixIcon,
+        hintStyle: hintStyle ?? AppTextStylesManeger.font12GreyRegular,
 
         // suffixIcon: IconButton(
         //   onPressed: suffixIconOnTap,
