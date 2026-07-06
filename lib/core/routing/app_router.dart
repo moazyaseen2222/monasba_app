@@ -9,6 +9,7 @@ import 'package:monasba_app/features/auth/presentation/pages/reassign_success_sc
 import 'package:monasba_app/features/auth/presentation/pages/sign_up_screen.dart';
 import 'package:monasba_app/features/auth/presentation/pages/signup_success_screen.dart';
 import 'package:monasba_app/features/auth/presentation/pages/update_password_screen.dart';
+import 'package:monasba_app/features/home/presentation/pages/home_screen.dart';
 import 'package:monasba_app/features/on_boarding/presentation/pages/on_boarding_screen.dart';
 import 'package:monasba_app/features/on_boarding/presentation/pages/splach_screen.dart';
 
@@ -50,10 +51,7 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => AddBankAccountScreen());
 
       case Routes.homeScreen:
-        return MaterialPageRoute(
-          builder:
-              (_) => const Scaffold(body: Center(child: Text('Home Screen'))),
-        );
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
 
       ///-----------------------------------------------------------------------------
       default:

@@ -25,6 +25,26 @@ class AppTextStylesManeger {
     color: Colors.red,
   );
 
+  static TextStyle font12WhiteBold = TextStyle(
+    fontSize: 12,
+    fontFamily: FontsManeger.almarai,
+    fontWeight: FontWeightManeger.bold,
+    color: Colors.white,
+  );
+
+  static TextStyle font12Bold = TextStyle(
+    fontSize: 12,
+    fontFamily: FontsManeger.almarai,
+    fontWeight: FontWeightManeger.bold,
+  );
+
+  static TextStyle font12WhiteRegular = TextStyle(
+    fontSize: 12,
+    fontFamily: FontsManeger.almarai,
+    fontWeight: FontWeightManeger.regular,
+    color: Colors.white,
+  );
+
   static TextStyle font20Blackbold = TextStyle(
     fontSize: 20,
     fontFamily: FontsManeger.almarai,
@@ -244,6 +264,12 @@ class AppTextStylesManeger {
 
   static TextStyle font16BlackRegular = TextStyle(
     fontSize: 16,
+    fontFamily: FontsManeger.almarai,
+    fontWeight: FontWeightManeger.regular,
+    color: Colors.black,
+  );
+  static TextStyle font11BlackRegular = TextStyle(
+    fontSize: 11,
     fontFamily: FontsManeger.almarai,
     fontWeight: FontWeightManeger.regular,
     color: Colors.black,

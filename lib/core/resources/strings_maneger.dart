@@ -92,4 +92,6 @@ class StringsManeger {
       'هل أنت متأكد من إضافة هذا الحساب البنكي؟ برجى التأكد من صحة جميع البيانات قبل المتابعة';
   static const String confirm = 'تأكيد';
   static const String cancel = 'إلغاء';
+  static const String previousMonasba = 'مناسبات سابقة';
+  static const String currentMonasba = 'المناسبات الحالية';
 }
