@@ -5,7 +5,7 @@ import 'package:monasba_app/core/resources/strings_maneger.dart';
 import 'package:monasba_app/core/resources/colors_maneger.dart';
 import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 import 'package:monasba_app/core/routing/routes.dart';
-import 'package:monasba_app/features/home/presentation/home_screen.dart';
+import 'package:monasba_app/features/home/presentation/pages/home_screen.dart';
 import 'package:monasba_app/features/on_boarding/models/on_boarding_model.dart';
 import 'package:monasba_app/features/on_boarding/widgets/onboarding_item_widget.dart';
 
