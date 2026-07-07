@@ -12,4 +12,5 @@ class Routes {
   static const String askAddBankAccount = '/askAddBankAccount';
   static const String addBankAccountScreen = '/addBankAccountScreen';
   static const String homeScreen = '/homeScreen';
+  static const String walletScreen = '/walletScreen';
 }
