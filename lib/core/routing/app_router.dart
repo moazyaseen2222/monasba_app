@@ -12,6 +12,7 @@ import 'package:monasba_app/features/auth/presentation/pages/update_password_scr
 import 'package:monasba_app/features/home/presentation/pages/home_screen.dart';
 import 'package:monasba_app/features/on_boarding/presentation/pages/on_boarding_screen.dart';
 import 'package:monasba_app/features/on_boarding/presentation/pages/splach_screen.dart';
+import 'package:monasba_app/features/wallet/presentation/pages/send_request_payment_screen.dart';
 import 'package:monasba_app/features/wallet/presentation/pages/wallet_screen.dart';
 
 class AppRouter {
@@ -56,6 +57,9 @@ class AppRouter {
 
       case Routes.walletScreen:
         return MaterialPageRoute(builder: (_) => const WalletScreen());
+
+      case Routes.sendRequestPaymentScreen:
+        return MaterialPageRoute(builder: (_) => SendRequestPaymentScreen());
 
       ///-----------------------------------------------------------------------------
       default:

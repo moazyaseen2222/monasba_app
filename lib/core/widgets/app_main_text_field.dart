@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
-import 'package:monasba_app/features/auth/widgets/password_filed.dart';
 
 class AppTextFormField extends StatelessWidget {
   const AppTextFormField({
@@ -21,6 +20,8 @@ class AppTextFormField extends StatelessWidget {
     this.hintText,
     required Null Function(dynamic value) onChanged,
     this.hintStyle,
+    this.minLines,
+    this.maxLines,
   });
 
   final String? title;
@@ -35,12 +36,17 @@ class AppTextFormField extends StatelessWidget {
   final TextStyle? labelStyle;
   final String? hintText;
   final TextStyle? hintStyle;
+  final int? minLines;
+  final int? maxLines;
 
   final Function(String?) validator;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      minLines: minLines,
+      maxLines: maxLines,
+
       initialValue: initialValue,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       obscureText: isObsecureText ?? false,

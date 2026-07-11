@@ -4,8 +4,6 @@ import 'package:monasba_app/core/resources/colors_maneger.dart';
 import 'package:monasba_app/core/routing/app_router.dart';
 import 'package:monasba_app/features/addBankAccount/presentation/pages/ask_add_bank_account_screen.dart';
 
-import 'package:monasba_app/features/on_boarding/presentation/pages/splach_screen.dart';
-
 void main() async {
   await ScreenUtil.ensureScreenSize();
   runApp(MyApp(appRouter: AppRouter()));

@@ -193,6 +193,13 @@ class AppTextStylesManeger {
     color: Colors.grey,
   );
 
+  static TextStyle font8GreyRegular = TextStyle(
+    fontSize: 8,
+    fontFamily: FontsManeger.almarai,
+    fontWeight: FontWeightManeger.regular,
+    color: Colors.grey,
+  );
+
   static TextStyle font10WhiteRegular = TextStyle(
     fontSize: 10,
     fontFamily: FontsManeger.almarai,

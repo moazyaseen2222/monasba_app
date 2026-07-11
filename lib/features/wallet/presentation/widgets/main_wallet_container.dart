@@ -16,7 +16,7 @@ class MainWalletContainer extends StatelessWidget {
         width: 343.w,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8.r),
-          color: const Color.fromARGB(255, 244, 242, 242),
+          color: const Color.fromARGB(255, 233, 235, 236),
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 15.w),

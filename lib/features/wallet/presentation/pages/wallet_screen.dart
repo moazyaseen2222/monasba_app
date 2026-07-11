@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monasba_app/core/helpers/app_spacer.dart';
+import 'package:monasba_app/core/helpers/extensions.dart';
+import 'package:monasba_app/core/routing/routes.dart';
 import 'package:monasba_app/core/widgets/app_main_button.dart';
 import 'package:monasba_app/features/wallet/presentation/widgets/main_wallet_container.dart';
 import 'package:monasba_app/features/wallet/presentation/widgets/wallet_operation_recored.dart';
@@ -26,7 +28,9 @@ class WalletScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 10.w),
                   child: AppMainButton(
                     title: 'طلب سحب أرباح',
-                    onPressed: () {},
+                    onPressed: () {
+                      context.pushNamed(Routes.sendRequestPaymentScreen);
+                    },
                   ),
                 ),
 

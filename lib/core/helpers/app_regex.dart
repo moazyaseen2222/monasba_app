@@ -55,6 +55,10 @@ class AppRegex {
     return RegExp(r'^.{4,}$').hasMatch(input);
   }
 
+  static bool hasNAmountMinLength(String input) {
+    return RegExp(r'^.{1,}$').hasMatch(input);
+  }
+
   // Check for minimum length
   // static bool hasMinLength(String input, int minLength) {
   //   return input.length >= minLength;
