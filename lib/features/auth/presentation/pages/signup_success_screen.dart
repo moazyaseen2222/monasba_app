@@ -5,7 +5,6 @@ import 'package:monasba_app/core/resources/strings_maneger.dart';
 import 'package:monasba_app/core/widgets/app_main_button.dart';
 import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 import 'package:monasba_app/features/auth/widgets/background_pattern.dart';
-import 'package:monasba_app/features/auth/widgets/reassign_widgets/description_rich_text.dart';
 import 'package:monasba_app/features/auth/widgets/reassign_widgets/success_signup_rich_text.dart';
 
 class SignUpSuccessScreen extends StatelessWidget {

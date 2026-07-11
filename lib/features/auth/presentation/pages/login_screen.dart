@@ -10,7 +10,6 @@ import 'package:monasba_app/core/widgets/app_main_button.dart';
 import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 import 'package:monasba_app/core/widgets/app_main_text_field.dart';
 import 'package:monasba_app/features/auth/widgets/background_pattern.dart';
-import 'package:monasba_app/features/auth/widgets/password_filed.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 import 'package:monasba_app/core/resources/colors_maneger.dart';
-import 'package:monasba_app/features/auth/presentation/pages/login_screen.dart';
-import 'package:monasba_app/features/auth/presentation/pages/sign_up_screen.dart';
 import 'package:monasba_app/features/home/presentation/widgets/current_events_screen.dart';
+import 'package:monasba_app/features/home/presentation/widgets/pervious_events_screen.dart';
 
 class HomeTabBar extends StatelessWidget {
   const HomeTabBar({super.key});
@@ -41,7 +40,7 @@ class HomeTabBar extends StatelessWidget {
           ),
           const Expanded(
             child: TabBarView(
-              children: [CurrentEventsScreen(), CurrentEventsScreen()],
+              children: [CurrentEventsScreen(), PerviousEventsScreen()],
               // children: [PreviousEventsScreen(), CurrentEventsScreen()],
             ),
           ),

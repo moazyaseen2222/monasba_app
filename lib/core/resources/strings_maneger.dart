@@ -94,4 +94,7 @@ class StringsManeger {
   static const String cancel = 'إلغاء';
   static const String previousMonasba = 'مناسبات سابقة';
   static const String currentMonasba = 'المناسبات الحالية';
+  static const String confirmSendingRequest = 'تأكيد إرسال الطلب';
+  static const String confirmSendingRequestDescription =
+      'هل أنت متأكد من إرسال طلب السحب؟ تأكد من صحة جميع البيانات قبل المتابعة.';
 }

@@ -6,8 +6,8 @@ import 'package:monasba_app/core/widgets/app_main_button.dart';
 import 'package:monasba_app/features/home/presentation/widgets/details_monasba_container.dart';
 import 'package:monasba_app/features/home/presentation/widgets/monasba_image_contaainer.dart';
 
-class CurrentEventsScreen extends StatelessWidget {
-  const CurrentEventsScreen({super.key});
+class PerviousEventsScreen extends StatelessWidget {
+  const PerviousEventsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

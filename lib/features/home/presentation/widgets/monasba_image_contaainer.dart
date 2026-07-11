@@ -12,7 +12,7 @@ class MonasbaImage extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(8.r),
           child: Image(
-            image: AssetImage('assets/images/monasba_imge.png'),
+            image: AssetImage('assets/images/current_monasba1.png'),
             fit: BoxFit.fitWidth,
             width: double.infinity,
           ),

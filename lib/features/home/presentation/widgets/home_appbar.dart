@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monasba_app/core/helpers/app_spacer.dart';
+import 'package:monasba_app/core/helpers/extensions.dart';
 import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 import 'package:monasba_app/core/resources/colors_maneger.dart';
+import 'package:monasba_app/core/routing/routes.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({super.key});
@@ -39,9 +41,18 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
                       children: [
                         _circleButton(Icons.settings_outlined),
                         horiznetlSpace(12),
-                        _circleButton(Icons.wallet_outlined),
+                        InkWell(
+                          onTap: () => context.pushNamed(Routes.walletScreen),
+
+                          child: _circleButton(Icons.wallet_outlined),
+                        ),
                         horiznetlSpace(12),
-                        _circleButton(Icons.notifications_none),
+                        InkWell(
+                          onTap:
+                              () =>
+                                  context.pushNamed(Routes.notificationScreen),
+                          child: _circleButton(Icons.notifications_none),
+                        ),
                       ],
                     ),
 
@@ -115,7 +126,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
         color: ColorsManeger.secondary,
         shape: BoxShape.circle,
       ),
-      child: Icon(icon, color: Colors.white, size: 20),
+      child: InkWell(child: Icon(icon, color: Colors.white, size: 20)),
     );
   }
 }
