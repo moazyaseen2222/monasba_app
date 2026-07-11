@@ -207,6 +207,13 @@ class AppTextStylesManeger {
     color: Colors.white,
   );
 
+  static TextStyle font7WhiteRegular = TextStyle(
+    fontSize: 7,
+    fontFamily: FontsManeger.almarai,
+    fontWeight: FontWeightManeger.regular,
+    color: Colors.white,
+  );
+
   static TextStyle font14PrimaryRegular = TextStyle(
     fontSize: 15,
     fontFamily: FontsManeger.almarai,

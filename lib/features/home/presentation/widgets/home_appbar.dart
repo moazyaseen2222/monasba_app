@@ -42,13 +42,17 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
                         _circleButton(Icons.settings_outlined),
                         horiznetlSpace(12),
                         InkWell(
-                          onTap: () {
-                            context.pushNamed(Routes.walletScreen);
-                          },
+                          onTap: () => context.pushNamed(Routes.walletScreen),
+
                           child: _circleButton(Icons.wallet_outlined),
                         ),
                         horiznetlSpace(12),
-                        _circleButton(Icons.notifications_none),
+                        InkWell(
+                          onTap:
+                              () =>
+                                  context.pushNamed(Routes.notificationScreen),
+                          child: _circleButton(Icons.notifications_none),
+                        ),
                       ],
                     ),
 
