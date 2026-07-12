@@ -6,8 +6,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monasba_app/core/helpers/app_spacer.dart';
 import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 import 'package:monasba_app/core/resources/colors_maneger.dart';
+import 'package:monasba_app/core/resources/strings_maneger.dart';
+import 'package:monasba_app/core/widgets/app_main_button.dart';
 import 'package:monasba_app/features/addEvent/presentation/controller/add_image_service.dart';
 import 'package:monasba_app/features/addEvent/presentation/widgets/add_event_app_bar.dart';
+import 'package:monasba_app/features/addEvent/presentation/widgets/image_head.dart';
+import 'package:monasba_app/features/addEvent/presentation/widgets/number_of_vistores.dart';
+import 'package:monasba_app/features/addEvent/presentation/widgets/paint_visteeros.dart';
 
 class AddEventScreen extends StatefulWidget {
   const AddEventScreen({super.key});
@@ -32,33 +37,7 @@ class _AddEventScreenState extends State<AddEventScreen> {
           padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
           child: Column(
             children: [
-              Row(
-                children: [
-                  Container(
-                    height: 42.h,
-                    width: 42.w,
-                    decoration: BoxDecoration(
-                      color: ColorsManeger.secondary,
-                      borderRadius: BorderRadius.circular(8.r),
-                    ),
-                    child: Icon(Icons.image_outlined, color: Colors.white),
-                  ),
-                  horiznetlSpace(7),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'صورة المناسبة',
-                        style: AppTextStylesManeger.font14BlackRegular,
-                      ),
-                      Text(
-                        'أرفق صورة توضّح طبيعة النشاط بشكل أفضل',
-                        style: AppTextStylesManeger.font10GreyRegular,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+              ImageHead(),
               verticalSpace(20),
               // Upload Box
               DottedBorder(
@@ -70,8 +49,8 @@ class _AddEventScreenState extends State<AddEventScreen> {
                   width: double.infinity,
                   // height: 500,
                   constraints: BoxConstraints(
-                    minHeight: 100.h,
-                    maxHeight: 300.h,
+                    // minHeight: 50.h,
+                    maxHeight: 180.h,
                   ),
                   alignment: Alignment.center,
                   child: SingleChildScrollView(
@@ -116,83 +95,11 @@ class _AddEventScreenState extends State<AddEventScreen> {
                 ),
               ),
               verticalSpace(10),
-              Container(
-                height: 84.h,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 213, 212, 212),
-                  borderRadius: BorderRadius.circular(12.r),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 42.h,
-                      width: 42.w,
-                      decoration: BoxDecoration(
-                        color: ColorsManeger.secondary,
-                        borderRadius: BorderRadius.circular(8.r),
-                      ),
-                      child: Icon(Icons.file_copy, color: Colors.white),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 10.0.h, right: 7.w),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Text(
-                                'طباعة المدعويين',
-                                style: AppTextStylesManeger.font14BlackRegular,
-                              ),
-                              horiznetlSpace(110),
-                              Container(
-                                height: 18.h,
-                                width: 63.w,
-                                decoration: BoxDecoration(
-                                  color: ColorsManeger.secondary,
-                                  borderRadius: BorderRadius.circular(18.r),
-                                ),
-                                child: Row(
-                                  children: [
-                                    Icon(
-                                      Icons.done,
-                                      color: Colors.white,
-                                      size: 15,
-                                    ),
-                                    Text(
-                                      'تفعيل الميزة',
-                                      style:
-                                          AppTextStylesManeger
-                                              .font7WhiteRegular,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          verticalSpace(5),
-                          RichText(
-                            text: TextSpan(
-                              text:
-                                  'فعّل اشتراك طباعة المدعوين، واحصل بعد الفرح على نسخة\nمطبوعة من قائمة المدعوين مع جميع تفاصيلهم مقابل ',
-                              style: AppTextStylesManeger.font10GreyRegular,
-                              children: [
-                                TextSpan(
-                                  text: '200 ريال',
-                                  style:
-                                      AppTextStylesManeger.font12BlackRegular,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              Paintvisteros(),
+              verticalSpace(10),
+              NumberOfVistores(),
+              verticalSpace(50),
+              AppMainButton(title: StringsManeger.next, onPressed: () {}),
             ],
           ),
         ),

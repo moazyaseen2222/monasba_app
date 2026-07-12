@@ -87,6 +87,13 @@ class AppTextStylesManeger {
     color: Colors.black,
   );
 
+  static TextStyle font32SecondaryRegular = TextStyle(
+    fontSize: 32,
+    fontFamily: FontsManeger.almarai,
+    fontWeight: FontWeightManeger.regular,
+    color: ColorsManeger.secondary,
+  );
+
   static TextStyle font20BlackRegular = TextStyle(
     fontSize: 20,
     fontFamily: FontsManeger.almarai,
@@ -289,6 +296,14 @@ class AppTextStylesManeger {
     fontWeight: FontWeightManeger.regular,
     color: Colors.black,
   );
+
+  static TextStyle font16GreyRegular = TextStyle(
+    fontSize: 16,
+    fontFamily: FontsManeger.almarai,
+    fontWeight: FontWeightManeger.regular,
+    color: Colors.grey,
+  );
+
   static TextStyle font11BlackRegular = TextStyle(
     fontSize: 11,
     fontFamily: FontsManeger.almarai,
