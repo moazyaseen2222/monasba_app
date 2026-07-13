@@ -3,6 +3,7 @@ import 'package:monasba_app/core/routing/routes.dart';
 import 'package:monasba_app/features/addBankAccount/presentation/pages/add_bank_aacount_screen.dart';
 import 'package:monasba_app/features/addBankAccount/presentation/pages/ask_add_bank_account_screen.dart';
 import 'package:monasba_app/features/addEvent/presentation/pages/add_event_screen.dart';
+import 'package:monasba_app/features/addEvent/presentation/pages/event_discription._screen.dart';
 import 'package:monasba_app/features/auth/presentation/pages/login_screen.dart';
 import 'package:monasba_app/features/auth/presentation/pages/otp_screen.dart';
 import 'package:monasba_app/features/auth/presentation/pages/reassign_password_screen.dart';
@@ -68,6 +69,9 @@ class AppRouter {
 
       case Routes.addEventScreen:
         return MaterialPageRoute(builder: (_) => AddEventScreen());
+
+      case Routes.eventDiscriptionScreen:
+        return MaterialPageRoute(builder: (_) => AddEventDiscriptionScreen());
 
       ///-----------------------------------------------------------------------------
       default:

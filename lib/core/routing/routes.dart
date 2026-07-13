@@ -16,4 +16,5 @@ class Routes {
   static const String sendRequestPaymentScreen = '/sendRequestPaymentScreen';
   static const String notificationScreen = '/notificationScreen';
   static const String addEventScreen = '/addEventScreen';
+  static const String eventDiscriptionScreen = '/eventDiscriptionScreen';
 }

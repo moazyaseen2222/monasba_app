@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 
 class AppTextFormField extends StatelessWidget {
@@ -64,14 +65,14 @@ class AppTextFormField extends StatelessWidget {
         // ),
         hintText: hintText,
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: Colors.grey, width: 1.0),
+          borderRadius: BorderRadius.circular(10.r),
+          borderSide: BorderSide(color: Colors.grey, width: 0.5),
         ),
         fillColor: fillColor,
         filled: isFilled ?? false,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: Colors.white, width: 1.0),
+          borderRadius: BorderRadius.circular(10.r),
+          borderSide: BorderSide(width: 0.5),
         ),
       ),
       validator: (value) {

@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       designSize: Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
+        // localizationsDelegates: GlobalMaterialLocalizations.delegates,
         theme: ThemeData(
           scaffoldBackgroundColor: ColorsManeger.white,
           appBarTheme: AppBarTheme(backgroundColor: ColorsManeger.white),

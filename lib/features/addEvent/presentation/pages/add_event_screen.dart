@@ -4,9 +4,11 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monasba_app/core/helpers/app_spacer.dart';
+import 'package:monasba_app/core/helpers/extensions.dart';
 import 'package:monasba_app/core/resources/app_text_styles_maneger.dart';
 import 'package:monasba_app/core/resources/colors_maneger.dart';
 import 'package:monasba_app/core/resources/strings_maneger.dart';
+import 'package:monasba_app/core/routing/routes.dart';
 import 'package:monasba_app/core/widgets/app_main_button.dart';
 import 'package:monasba_app/features/addEvent/presentation/controller/add_image_service.dart';
 import 'package:monasba_app/features/addEvent/presentation/widgets/add_event_app_bar.dart';
@@ -99,7 +101,11 @@ class _AddEventScreenState extends State<AddEventScreen> {
               verticalSpace(10),
               NumberOfVistores(),
               verticalSpace(50),
-              AppMainButton(title: StringsManeger.next, onPressed: () {}),
+              AppMainButton(
+                title: StringsManeger.next,
+                onPressed:
+                    () => context.pushNamed(Routes.eventDiscriptionScreen),
+              ),
             ],
           ),
         ),
